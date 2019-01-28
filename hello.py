@@ -14,7 +14,7 @@ def hello_world():
 @app.route('/')
 def rand_recipe():
     recipe = app.db.all()[randrange(len(app.db))]
-    return render_template('recipe.html', recipe=recipe) # noqa
+    return render_template('recipe.html', recipe=recipe)
 
 
 @app.route('/recipe/')
@@ -22,4 +22,4 @@ def rand_recipe():
 def recipe(recipe_id):
     recipe = app.db.all()[int(recipe_id)]
     print(recipe)
-    return render_template('recipe.html', recipe=recipe) # noqa
+    return render_template('recipe.html', recipe=recipe)
